@@ -4,6 +4,11 @@
   "data_alias": "ck-request-asplos18-results-resnet-tvm-fpga",
   "data_name": "ck-request-asplos18-results-resnet-tvm-fpga",
   "dict": {
+    "repo_deps": [
+      {
+        "repo_uoa": "ck-request-asplos18-results"
+      }
+    ],
     "shared": "git",
     "url": "https://github.com/ctuning/ck-request-asplos18-results-resnet-tvm-fpga"
   }
