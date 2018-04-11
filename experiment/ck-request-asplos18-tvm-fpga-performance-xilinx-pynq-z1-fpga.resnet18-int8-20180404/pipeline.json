@@ -1,0 +1,1374 @@
+{
+  "cmd_key": "classify", 
+  "tmp_dir": "", 
+  "features": {
+    "compiler_version": {
+      "raw": "", 
+      "list": [], 
+      "str": ""
+    }
+  }, 
+  "characteristics": {}, 
+  "choices": {
+    "cmd_key": "classify", 
+    "no_state_check": "yes", 
+    "target": "pynq", 
+    "module_uoa": "b0ac08fe1d3c2615", 
+    "dataset_uoa": "image-jpeg-dnn-cat", 
+    "host_os": "linux-64", 
+    "energy": "no", 
+    "device_cfg": {
+      "update_target_os_dict": {
+        "skip_platform_detection": "yes", 
+        "remote_pull": "ck pull crowdnode --url=cknowledge.ddns.net:9091  --filename=$#file1#$ --filename2=\"$#file2#$\"", 
+        "remote_shell": "ck shell crowdnode --url=cknowledge.ddns.net:9091  --cmd=\"", 
+        "remote_id": "cknowledge.ddns.net:9091", 
+        "remote_init": "ck shell crowdnode --url=cknowledge.ddns.net:9091  --cmd=\"echo remote_init...\"", 
+        "preset_host_env": {
+          "CK_MACHINE_HOST": "cknowledge.ddns.net", 
+          "CK_MACHINE_PORT": "9091"
+        }, 
+        "remote_dir": "", 
+        "remote_dir_full": "tmp-ck", 
+        "remote_push": "ck push crowdnode --url=cknowledge.ddns.net:9091  --filename=$#file1#$ --filename2=\"$#file2#$\""
+      }, 
+      "access_type": "rpc", 
+      "remote_params": {
+        "host": "cknowledge.ddns.net", 
+        "port": "9091"
+      }
+    }, 
+    "dataset_file": "cat.jpg", 
+    "skip_print_timers": "yes", 
+    "skip_calibration": "yes", 
+    "env": {
+      "CK_MACHINE_HOST": "cknowledge.ddns.net", 
+      "CK_MACHINE_PORT": "9091"
+    }, 
+    "target_os_bits": "64", 
+    "flags": "-O3", 
+    "compile_type": "dynamic", 
+    "data_uoa": "request-tvm-vta-pynq", 
+    "target_os": "linux-64", 
+    "device_id": ""
+  }, 
+  "state": {
+    "tmp_dir": "tmp", 
+    "cur_dir": "/home/fursin/CK/ck-request-asplos18-resnet-tvm-fpga/script/benchmark-request-tvm-fpga"
+  }, 
+  "dependencies": {
+    "lib-nnvm": {
+      "sort": 30, 
+      "for_run_time": "yes", 
+      "bat": ". /home/fursin/CK/local/env/649be13b4b33bd67/env.sh\n", 
+      "cus": {
+        "git_src_dir": "src", 
+        "use_git_revision": "yes", 
+        "used_package_uid": "3558b44a58d64aa6", 
+        "used_package_uoa": "lib-nnvm-master", 
+        "install_env": {
+          "USE_RPC": 1, 
+          "PACKAGE_PATCH": "NO", 
+          "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+          "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+          "CK_CPU_ARM_NEON": "OFF", 
+          "PACKAGE_SUB_DIR": "src", 
+          "CK_CC_FLAGS_FOR_CMAKE": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+          "PACKAGE_BUILD_TYPE": "make", 
+          "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+          "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+          "CK_CXX_FLAGS_FOR_CMAKE": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+          "CK_CPU_ARM_VFPV3": "OFF", 
+          "CK_CXX_PATH_FOR_CMAKE": "/usr/bin/clang++-5.0", 
+          "CK_TARGET_CPU_BITS": "64", 
+          "CK_CC_PATH_FOR_CMAKE": "/usr/bin/clang-5.0", 
+          "CK_COMPILER_PATH_FOR_CMAKE_MINGW": "/usr/bin", 
+          "CK_ARMEABI_V7A": "OFF", 
+          "USE_OPENCL": 0, 
+          "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+          "CK_HOST_OS_ID": "linux", 
+          "PACKAGE_GIT": "YES", 
+          "CK_AR_PATH_FOR_CMAKE_MINGW": "/usr/bin/llvm-ar", 
+          "PYTHON_EXE": "python", 
+          "CK_TARGET_OS_ID": "linux", 
+          "CK_CXX_FLAGS_FOR_CMAKE_MINGW": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+          "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+          "PACKAGE_VERSION": "master", 
+          "CK_CC_PATH_FOR_CMAKE_MINGW": "/usr/bin/clang-5.0", 
+          "CK_CXX_PATH_FOR_CMAKE_MINGW": "/usr/bin/clang++-5.0", 
+          "CK_CMAKE_EXTRA": "", 
+          "PACKAGE_COPY": "NO", 
+          "PACKAGE_URL": "https://github.com/tqchen/nnvm", 
+          "CK_CC_FLAGS_FOR_CMAKE_MINGW": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+          "CK_CLANG": "YES", 
+          "CK_ARMEABI_V7A_HARD": "OFF", 
+          "CK_COMPILER_PATH_FOR_CMAKE": "/usr/bin", 
+          "PACKAGE_GIT_CHECKOUT": "qt", 
+          "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
+          "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
+          "CK_AR_PATH_FOR_CMAKE": "/usr/bin/llvm-ar", 
+          "PACKAGE_CONFIGURE_FLAGS": ""
+        }, 
+        "soft_file": {
+          "win": "libnnvm.lib", 
+          "linux": "libnnvm.a"
+        }, 
+        "extra_dir": "", 
+        "skip_path": "yes", 
+        "version": "master-541cf56", 
+        "env_prefix": "CK_ENV_LIB_NNVM", 
+        "git_info": {
+          "revision": "541cf56", 
+          "iso_datetime_cut": "20180220", 
+          "iso_datetime_cut_revision": "20180220-541cf56", 
+          "iso_datetime": "2018-02-20T16:29:33", 
+          "datetime": "Tue Feb 20 16:29:33 2018 -0800"
+        }, 
+        "version_split": [
+          0, 
+          0
+        ], 
+        "limit_recursion_dir_search": {
+          "win": 5, 
+          "linux": 5
+        }, 
+        "check_that_exists": "yes", 
+        "no_ver_in_suggested_path": "yes", 
+        "ck_version": 10, 
+        "full_path": "/home/fursin/CK/local/env/649be13b4b33bd67/src/lib/libnnvm.a", 
+        "path_lib": "/home/fursin/CK/local/env/649be13b4b33bd67/src/lib"
+      }, 
+      "name": "NNVM library", 
+      "tags": "lib,nnvm", 
+      "num_entries": 1, 
+      "choices": [
+        "649be13b4b33bd67"
+      ], 
+      "uoa": "649be13b4b33bd67", 
+      "dict": {
+        "data_name": "NNVM library", 
+        "deps": {
+          "python": {
+            "detected_ver": "2.7.12", 
+            "sort": 5, 
+            "bat": ". /home/fursin/CK/local/env/7e0e1bdbda34e9d9/env.sh\n", 
+            "ver": "2.7.12", 
+            "name": "Python", 
+            "tags": "compiler,python", 
+            "build_dir_name": "python", 
+            "uoa": "7e0e1bdbda34e9d9", 
+            "choices": [
+              "7e0e1bdbda34e9d9"
+            ], 
+            "num_entries": 1, 
+            "dict": {
+              "env_script": "env.sh", 
+              "deps": {}, 
+              "tags": [
+                "64bits", 
+                "compiler", 
+                "host-os-linux-64", 
+                "lang-python", 
+                "python", 
+                "target-os-linux-64", 
+                "v2", 
+                "v2.7", 
+                "v2.7.12"
+              ], 
+              "customize": {
+                "soft_version_cmd": {
+                  "win": "--version > $#filename#$ 2>&1", 
+                  "linux": "--version > $#filename#$ 2>&1"
+                }, 
+                "only_for_host_os_tags": [
+                  "windows", 
+                  "linux"
+                ], 
+                "build_dir_name": "python", 
+                "env_prefix": "CK_ENV_COMPILER_PYTHON", 
+                "skip_path": "yes", 
+                "only_for_target_os_tags": [
+                  "windows", 
+                  "android", 
+                  "linux"
+                ], 
+                "languages": [
+                  "PYTHON"
+                ], 
+                "soft_file": {
+                  "win": "python*.exe", 
+                  "linux": "python*"
+                }, 
+                "version": "2.7.12", 
+                "soft_file_from_host_os": "yes", 
+                "add_only_with_version": "yes", 
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "limit_recursion_dir_search": {
+                  "win": 4, 
+                  "linux": 3
+                }, 
+                "check_that_exists": "yes", 
+                "ck_version": 10, 
+                "full_path": "/usr/bin/python2"
+              }, 
+              "setup": {
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "target_os_bits": "64", 
+                "version": "2.7.12", 
+                "host_os_uoa": "4258b5fe54828a50", 
+                "target_os_uoa": "4258b5fe54828a50"
+              }, 
+              "data_name": "python", 
+              "soft_uoa": "45d68512df22fde7", 
+              "env": {
+                "CK_PYTHON_IPYTHON_BIN_FULL": "/usr/local/bin/ipython2", 
+                "CK_ENV_COMPILER_PYTHON": "/usr", 
+                "CK_PYTHON_VER2": "YES", 
+                "CK_ENV_COMPILER_PYTHON_BIN": "/usr/bin", 
+                "CK_PYTHON_PIP_BIN_FULL": "/usr/local/bin/pip2", 
+                "CK_PYTHON_IPYTHON_BIN": "ipython2", 
+                "CK_PY_RT": "python", 
+                "CK_PY_OBJ_EXT": ".pyc", 
+                "CK_ENV_COMPILER_PYTHON_FILE": "/usr/bin/python2", 
+                "CK_PYTHON_BIN": "python2", 
+                "CK_PYC": "python", 
+                "CK_PYTHON_PIP_BIN": "pip2"
+              }, 
+              "soft_alias": "compiler.python"
+            }, 
+            "local": "yes"
+          }, 
+          "compiler": {
+            "detected_ver": "5.0.0-3~16.04.1", 
+            "sort": 10, 
+            "bat": ". /home/fursin/CK/local/env/0c39fb6f56334db8/env.sh\n", 
+            "ver": "5.0.0-3~16.04.1", 
+            "name": "Compiler", 
+            "tags": "compiler, lang-c", 
+            "build_dir_name": "llvm", 
+            "uoa": "0c39fb6f56334db8", 
+            "choices": [
+              "0c39fb6f56334db8"
+            ], 
+            "num_entries": 1, 
+            "dict": {
+              "env_script": "env.sh", 
+              "deps": {
+                "ndk-gcc": {
+                  "local": "yes", 
+                  "name": "Android NDK GCC", 
+                  "only_for_target_os_tags": [
+                    "android"
+                  ], 
+                  "tags": "compiler,gcc,ndk"
+                }, 
+                "mvsc": {
+                  "local": "yes", 
+                  "name": "microsoft C compiler", 
+                  "only_for_target_os_tags": [
+                    "windows"
+                  ], 
+                  "tags": "microsoft,compiler"
+                }
+              }, 
+              "tags": [
+                "64bits", 
+                "compiler", 
+                "host-os-linux-64", 
+                "lang-c", 
+                "lang-cpp", 
+                "llvm", 
+                "target-os-linux-64", 
+                "v5", 
+                "v5.0", 
+                "v5.0.0", 
+                "v5.0.0.0", 
+                "v5.0.0.0.4", 
+                "v5.0.0.0.4.1"
+              ], 
+              "customize": {
+                "tool_postfix": "-5.0", 
+                "can_strip_dynamic_lib": "yes", 
+                "build_dir_name": "llvm", 
+                "skip_path": "yes", 
+                "tool_prefix_configured": "yes", 
+                "tool_prefix": "", 
+                "tool_postfix_configured": "yes", 
+                "env_prefix": "CK_ENV_COMPILER_LLVM", 
+                "soft_version_cmd": {
+                  "win": " --version > $#filename#$ 2>&1", 
+                  "linux": "--version > $#filename#$ 2>&1"
+                }, 
+                "soft_path_example": {
+                  "win": "C:\\Program Files (x86)\\llvm\\bin\\clang.exe", 
+                  "linux": "/usr/bin/clang"
+                }, 
+                "languages": [
+                  "C", 
+                  "CPP"
+                ], 
+                "version": "5.0.0-3~16.04.1", 
+                "soft_file_from_host_os": "yes", 
+                "path_lib": "/usr/lib", 
+                "sort": 50, 
+                "soft_file": {
+                  "win": "clang.exe", 
+                  "linux": "clang"
+                }, 
+                "retarget": "no", 
+                "search_numeric_ext_on_linux": "yes", 
+                "add_to_path": "yes", 
+                "add_only_with_version": "yes", 
+                "version_split": [
+                  5, 
+                  0, 
+                  0, 
+                  0, 
+                  4, 
+                  1
+                ], 
+                "limit_recursion_dir_search": {
+                  "win": 4, 
+                  "linux": 3
+                }, 
+                "check_that_exists": "yes", 
+                "ck_version": 10, 
+                "path_include": "/usr/include", 
+                "only_for_target_os_tags": [
+                  "windows", 
+                  "linux"
+                ], 
+                "full_path": "/usr/bin/clang-5.0"
+              }, 
+              "setup": {
+                "version_split": [
+                  5, 
+                  0, 
+                  0, 
+                  0, 
+                  4, 
+                  1
+                ], 
+                "target_os_bits": "64", 
+                "version": "5.0.0-3~16.04.1", 
+                "host_os_uoa": "4258b5fe54828a50", 
+                "target_os_uoa": "4258b5fe54828a50"
+              }, 
+              "data_name": "LLVM compiler", 
+              "soft_uoa": "1c2eb494b8ae3bc4", 
+              "env": {
+                "CK_FLAGS_DYNAMIC_BIN": " ", 
+                "CK_COMPILER_FLAGS_OBLIGATORY": "", 
+                "CK_AR": "llvm-ar", 
+                "CK_COMPILER_POSTFIX": "-5.0", 
+                "CK_PROFILER": "gprof", 
+                "CK_COMPILER_TOOLCHAIN_NAME": "clang", 
+                "CK_LIB_EXT": ".a", 
+                "CK_LLVM_CONFIG": "llvm-config-5.0", 
+                "CK_OPT_SIZE": "-Os", 
+                "CK_OPT_SPEED": "-O3", 
+                "CK_COMPILER_FLAG_PTHREAD_LIB": "-lpthread", 
+                "CK_CC": "clang-5.0", 
+                "CK_RANLIB": "llvm-ranlib", 
+                "CK_COMPILER_FLAG_GPROF": "-pg", 
+                "CK_LB_OUTPUT": "", 
+                "CK_COMPILER_ENABLE_EXCEPTIONS": "-fcxx-exceptions", 
+                "CK_ENV_COMPILER_LLVM": "/usr", 
+                "CK_FLAG_PREFIX_VAR": "-D", 
+                "CK_COMPILER_FLAG_STD90": "-std=c90", 
+                "CK_EXTRA_LIB_M": "-lm", 
+                "CK_COMPILER_FLAG_STD99": "-std=c99", 
+                "CK_FLAG_PREFIX_LIB_DIR": "-L", 
+                "CK_FLAGS_CREATE_OBJ": "-c", 
+                "CK_LINKER_FLAG_OPENMP": "-fopenmp", 
+                "CK_ENV_COMPILER_LLVM_BIN": "/usr/bin", 
+                "CK_OPT_UNWIND": " ", 
+                "CK_OBJ_EXT": ".o", 
+                "CK_FLAGS_OUTPUT": "-o ", 
+                "CK_LB": "llvm-ar rcs", 
+                "CK_MAKE": "make", 
+                "CK_COMPILER_FLAG_CPP11": "-std=c++11", 
+                "CK_COMPILER_FLAG_OPENMP": "-fopenmp", 
+                "CK_PLUGIN_FLAG": "-fplugin=", 
+                "CK_OPT_SPEED_SAFE": "-O2", 
+                "CK_DLL_EXT": ".so", 
+                "CK_CXX": "clang++-5.0", 
+                "CK_ASM_EXT": ".s", 
+                "CK_FLAG_PREFIX_INCLUDE": "-I", 
+                "CK_LD_FLAGS_EXTRA": "", 
+                "CK_OBJDUMP": "llvm-objdump -d", 
+                "CK_EXE_EXT": ".out", 
+                "CK_FLAGS_DLL_EXTRA": "", 
+                "CK_FLAGS_DLL": "-shared -fPIC", 
+                "CK_FLAGS_STATIC_BIN": "-static -fPIC", 
+                "CK_FLAGS_STATIC_LIB": "-fPIC", 
+                "CK_EXTRA_LIB_DL": "-ldl", 
+                "CK_GPROF_OUT_FILE": "gmon.out", 
+                "CK_COMPILER_FLAG_CPP0X": "-std=c++0x", 
+                "CK_COMPILER_FLAG_PLUGIN": "-fplugin=", 
+                "CK_FLAGS_CREATE_ASM": "-S", 
+                "CK_COMPILER_PREFIX": ""
+              }, 
+              "soft_alias": "compiler.llvm"
+            }, 
+            "local": "yes"
+          }
+        }, 
+        "tags": [
+          "64bits", 
+          "compiled-by-llvm", 
+          "compiled-by-llvm-5.0.0-3~16.04.1", 
+          "host-os-linux-64", 
+          "lib", 
+          "nnvm", 
+          "target-os-linux-64", 
+          "v0", 
+          "v0.0", 
+          "vmaster", 
+          "vsources"
+        ], 
+        "customize": {
+          "git_src_dir": "src", 
+          "use_git_revision": "yes", 
+          "used_package_uid": "3558b44a58d64aa6", 
+          "used_package_uoa": "lib-nnvm-master", 
+          "install_env": {
+            "USE_RPC": 1, 
+            "PACKAGE_PATCH": "NO", 
+            "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+            "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+            "CK_CPU_ARM_NEON": "OFF", 
+            "PACKAGE_SUB_DIR": "src", 
+            "CK_CC_FLAGS_FOR_CMAKE": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+            "PACKAGE_BUILD_TYPE": "make", 
+            "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+            "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+            "CK_CXX_FLAGS_FOR_CMAKE": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+            "CK_CPU_ARM_VFPV3": "OFF", 
+            "CK_CXX_PATH_FOR_CMAKE": "/usr/bin/clang++-5.0", 
+            "CK_TARGET_CPU_BITS": "64", 
+            "CK_CC_PATH_FOR_CMAKE": "/usr/bin/clang-5.0", 
+            "CK_COMPILER_PATH_FOR_CMAKE_MINGW": "/usr/bin", 
+            "CK_ARMEABI_V7A": "OFF", 
+            "USE_OPENCL": 0, 
+            "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+            "CK_HOST_OS_ID": "linux", 
+            "PACKAGE_GIT": "YES", 
+            "CK_AR_PATH_FOR_CMAKE_MINGW": "/usr/bin/llvm-ar", 
+            "PYTHON_EXE": "python", 
+            "CK_TARGET_OS_ID": "linux", 
+            "CK_CXX_FLAGS_FOR_CMAKE_MINGW": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+            "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+            "PACKAGE_VERSION": "master", 
+            "CK_CC_PATH_FOR_CMAKE_MINGW": "/usr/bin/clang-5.0", 
+            "CK_CXX_PATH_FOR_CMAKE_MINGW": "/usr/bin/clang++-5.0", 
+            "CK_CMAKE_EXTRA": "", 
+            "PACKAGE_COPY": "NO", 
+            "PACKAGE_URL": "https://github.com/tqchen/nnvm", 
+            "CK_CC_FLAGS_FOR_CMAKE_MINGW": "${CK_COMPILER_FLAGS_OBLIGATORY}", 
+            "CK_CLANG": "YES", 
+            "CK_ARMEABI_V7A_HARD": "OFF", 
+            "CK_COMPILER_PATH_FOR_CMAKE": "/usr/bin", 
+            "PACKAGE_GIT_CHECKOUT": "qt", 
+            "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
+            "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
+            "CK_AR_PATH_FOR_CMAKE": "/usr/bin/llvm-ar", 
+            "PACKAGE_CONFIGURE_FLAGS": ""
+          }, 
+          "soft_file": {
+            "win": "libnnvm.lib", 
+            "linux": "libnnvm.a"
+          }, 
+          "extra_dir": "", 
+          "skip_path": "yes", 
+          "version": "master-541cf56", 
+          "env_prefix": "CK_ENV_LIB_NNVM", 
+          "git_info": {
+            "revision": "541cf56", 
+            "iso_datetime_cut": "20180220", 
+            "iso_datetime_cut_revision": "20180220-541cf56", 
+            "iso_datetime": "2018-02-20T16:29:33", 
+            "datetime": "Tue Feb 20 16:29:33 2018 -0800"
+          }, 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "limit_recursion_dir_search": {
+            "win": 5, 
+            "linux": 5
+          }, 
+          "check_that_exists": "yes", 
+          "no_ver_in_suggested_path": "yes", 
+          "ck_version": 10, 
+          "full_path": "/home/fursin/CK/local/env/649be13b4b33bd67/src/lib/libnnvm.a", 
+          "path_lib": "/home/fursin/CK/local/env/649be13b4b33bd67/src/lib"
+        }, 
+        "setup": {
+          "deps_compiler": "0c39fb6f56334db8", 
+          "version": "master", 
+          "deps_python": "7e0e1bdbda34e9d9", 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "target_os_bits": "64", 
+          "host_os_uoa": "4258b5fe54828a50", 
+          "target_os_uoa": "4258b5fe54828a50"
+        }, 
+        "env_script": "env.sh", 
+        "package_uoa": "3558b44a58d64aa6", 
+        "soft_uoa": "98928b1af4dcf29d", 
+        "env": {
+          "CK_ENV_LIB_NNVM": "/home/fursin/CK/local/env/649be13b4b33bd67/src", 
+          "CK_ENV_LIB_NNVM_PYTHON_LIB": "/home/fursin/CK/local/env/649be13b4b33bd67/src/python", 
+          "CK_ENV_LIB_NNVM_LIB": "/home/fursin/CK/local/env/649be13b4b33bd67/src/lib"
+        }, 
+        "soft_alias": "lib.nnvm"
+      }, 
+      "ver": "master-541cf56", 
+      "package_uoa": "3558b44a58d64aa6", 
+      "local": "yes"
+    }, 
+    "lib-vta": {
+      "sort": 10, 
+      "for_run_time": "yes", 
+      "bat": ". /home/fursin/CK/local/env/b45547e48e7d3e27/env.sh\n", 
+      "cus": {
+        "git_src_dir": "src", 
+        "use_git_revision": "yes", 
+        "used_package_uid": "704dc1923176c706", 
+        "used_package_uoa": "lib-vta-python-master", 
+        "install_env": {
+          "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+          "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+          "CK_HOST_OS_ID": "linux", 
+          "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+          "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+          "PACKAGE_CONFIGURE_FLAGS": "", 
+          "PYTHON_EXE": "python", 
+          "CK_TARGET_OS_ID": "linux", 
+          "PACKAGE_VERSION": "master", 
+          "PACKAGE_SUB_DIR": "src", 
+          "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
+          "PACKAGE_GIT_CHECKOUT": "", 
+          "PACKAGE_BUILD_TYPE": "make", 
+          "PACKAGE_PATCH": "NO", 
+          "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+          "PACKAGE_COPY": "NO", 
+          "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+          "PACKAGE_GIT": "YES", 
+          "PACKAGE_URL": "https://github.com/uwsaml/vta.git", 
+          "CK_TARGET_CPU_BITS": "64", 
+          "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO"
+        }, 
+        "soft_file": {
+          "win": "vta\\__init__.py", 
+          "linux": "vta/__init__.py"
+        }, 
+        "extra_dir": "", 
+        "skip_path": "yes", 
+        "version": "master-9ad9277", 
+        "env_prefix": "CK_ENV_LIB_VTA_PYTHON", 
+        "git_info": {
+          "revision": "9ad9277", 
+          "iso_datetime_cut": "20180322", 
+          "iso_datetime_cut_revision": "20180322-9ad9277", 
+          "iso_datetime": "2018-03-22T21:42:12", 
+          "datetime": "Thu Mar 22 21:42:12 2018 -0400"
+        }, 
+        "version_split": [
+          0, 
+          0
+        ], 
+        "limit_recursion_dir_search": {
+          "win": 5, 
+          "linux": 5
+        }, 
+        "check_that_exists": "yes", 
+        "no_ver_in_suggested_path": "yes", 
+        "ck_version": 10, 
+        "full_path": "/home/fursin/CK/local/env/b45547e48e7d3e27/src/python/vta/__init__.py"
+      }, 
+      "name": "VTA library", 
+      "tags": "lib,vta-python", 
+      "num_entries": 1, 
+      "choices": [
+        "b45547e48e7d3e27"
+      ], 
+      "uoa": "b45547e48e7d3e27", 
+      "dict": {
+        "data_name": "VTA python library", 
+        "deps": {
+          "python": {
+            "detected_ver": "2.7.12", 
+            "sort": 5, 
+            "bat": ". /home/fursin/CK/local/env/7e0e1bdbda34e9d9/env.sh\n", 
+            "ver": "2.7.12", 
+            "name": "Python", 
+            "tags": "compiler,python", 
+            "build_dir_name": "python", 
+            "uoa": "7e0e1bdbda34e9d9", 
+            "choices": [
+              "7e0e1bdbda34e9d9"
+            ], 
+            "num_entries": 1, 
+            "dict": {
+              "env_script": "env.sh", 
+              "deps": {}, 
+              "tags": [
+                "64bits", 
+                "compiler", 
+                "host-os-linux-64", 
+                "lang-python", 
+                "python", 
+                "target-os-linux-64", 
+                "v2", 
+                "v2.7", 
+                "v2.7.12"
+              ], 
+              "customize": {
+                "soft_version_cmd": {
+                  "win": "--version > $#filename#$ 2>&1", 
+                  "linux": "--version > $#filename#$ 2>&1"
+                }, 
+                "only_for_host_os_tags": [
+                  "windows", 
+                  "linux"
+                ], 
+                "build_dir_name": "python", 
+                "env_prefix": "CK_ENV_COMPILER_PYTHON", 
+                "skip_path": "yes", 
+                "only_for_target_os_tags": [
+                  "windows", 
+                  "android", 
+                  "linux"
+                ], 
+                "languages": [
+                  "PYTHON"
+                ], 
+                "soft_file": {
+                  "win": "python*.exe", 
+                  "linux": "python*"
+                }, 
+                "version": "2.7.12", 
+                "soft_file_from_host_os": "yes", 
+                "add_only_with_version": "yes", 
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "limit_recursion_dir_search": {
+                  "win": 4, 
+                  "linux": 3
+                }, 
+                "check_that_exists": "yes", 
+                "ck_version": 10, 
+                "full_path": "/usr/bin/python2"
+              }, 
+              "setup": {
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "target_os_bits": "64", 
+                "version": "2.7.12", 
+                "host_os_uoa": "4258b5fe54828a50", 
+                "target_os_uoa": "4258b5fe54828a50"
+              }, 
+              "data_name": "python", 
+              "soft_uoa": "45d68512df22fde7", 
+              "env": {
+                "CK_PYTHON_IPYTHON_BIN_FULL": "/usr/local/bin/ipython2", 
+                "CK_ENV_COMPILER_PYTHON": "/usr", 
+                "CK_PYTHON_VER2": "YES", 
+                "CK_ENV_COMPILER_PYTHON_BIN": "/usr/bin", 
+                "CK_PYTHON_PIP_BIN_FULL": "/usr/local/bin/pip2", 
+                "CK_PYTHON_IPYTHON_BIN": "ipython2", 
+                "CK_PY_RT": "python", 
+                "CK_PY_OBJ_EXT": ".pyc", 
+                "CK_ENV_COMPILER_PYTHON_FILE": "/usr/bin/python2", 
+                "CK_PYTHON_BIN": "python2", 
+                "CK_PYC": "python", 
+                "CK_PYTHON_PIP_BIN": "pip2"
+              }, 
+              "soft_alias": "compiler.python"
+            }, 
+            "local": "yes"
+          }
+        }, 
+        "tags": [
+          "64bits", 
+          "host-os-linux-64", 
+          "lib", 
+          "target-os-linux-64", 
+          "v0", 
+          "v0.0", 
+          "vmaster", 
+          "vpython", 
+          "vta-python"
+        ], 
+        "customize": {
+          "git_src_dir": "src", 
+          "use_git_revision": "yes", 
+          "used_package_uid": "704dc1923176c706", 
+          "used_package_uoa": "lib-vta-python-master", 
+          "install_env": {
+            "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+            "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+            "CK_HOST_OS_ID": "linux", 
+            "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+            "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+            "PACKAGE_CONFIGURE_FLAGS": "", 
+            "PYTHON_EXE": "python", 
+            "CK_TARGET_OS_ID": "linux", 
+            "PACKAGE_VERSION": "master", 
+            "PACKAGE_SUB_DIR": "src", 
+            "PACKAGE_GIT_CLONE_FLAGS": "--recursive", 
+            "PACKAGE_GIT_CHECKOUT": "", 
+            "PACKAGE_BUILD_TYPE": "make", 
+            "PACKAGE_PATCH": "NO", 
+            "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+            "PACKAGE_COPY": "NO", 
+            "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+            "PACKAGE_GIT": "YES", 
+            "PACKAGE_URL": "https://github.com/uwsaml/vta.git", 
+            "CK_TARGET_CPU_BITS": "64", 
+            "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO"
+          }, 
+          "soft_file": {
+            "win": "vta\\__init__.py", 
+            "linux": "vta/__init__.py"
+          }, 
+          "extra_dir": "", 
+          "skip_path": "yes", 
+          "version": "master-9ad9277", 
+          "env_prefix": "CK_ENV_LIB_VTA_PYTHON", 
+          "git_info": {
+            "revision": "9ad9277", 
+            "iso_datetime_cut": "20180322", 
+            "iso_datetime_cut_revision": "20180322-9ad9277", 
+            "iso_datetime": "2018-03-22T21:42:12", 
+            "datetime": "Thu Mar 22 21:42:12 2018 -0400"
+          }, 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "limit_recursion_dir_search": {
+            "win": 5, 
+            "linux": 5
+          }, 
+          "check_that_exists": "yes", 
+          "no_ver_in_suggested_path": "yes", 
+          "ck_version": 10, 
+          "full_path": "/home/fursin/CK/local/env/b45547e48e7d3e27/src/python/vta/__init__.py"
+        }, 
+        "setup": {
+          "version": "master", 
+          "deps_python": "7e0e1bdbda34e9d9", 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "target_os_bits": "64", 
+          "host_os_uoa": "4258b5fe54828a50", 
+          "target_os_uoa": "4258b5fe54828a50"
+        }, 
+        "env_script": "env.sh", 
+        "package_uoa": "704dc1923176c706", 
+        "soft_uoa": "13a8561d6a2a166c", 
+        "env": {
+          "CK_ENV_LIB_VTA_PYTHON_LIB": "/home/fursin/CK/local/env/b45547e48e7d3e27/src/python", 
+          "CK_ENV_LIB_VTA_PYTHON": "/home/fursin/CK/local/env/b45547e48e7d3e27/src", 
+          "CK_ENV_LIB_VTA_PYTHON_PYTHON_LIB": "/home/fursin/CK/local/env/b45547e48e7d3e27/src/python"
+        }, 
+        "soft_alias": "lib.vta.python"
+      }, 
+      "ver": "master-9ad9277", 
+      "package_uoa": "704dc1923176c706", 
+      "local": "yes"
+    }, 
+    "model": {
+      "sort": 50, 
+      "bat": ". /home/fursin/CK/local/env/a7740840dea199d8/env.sh\n", 
+      "ver": "20180404", 
+      "name": "VTA model (net and weights)", 
+      "tags": "vtamodel", 
+      "num_entries": 1, 
+      "package_uoa": "345c4a4420d02c60", 
+      "uoa": "a7740840dea199d8", 
+      "dict": {
+        "data_name": "VTA model (net and weights) (resnet 18, int8, 20180404)", 
+        "deps": {}, 
+        "tags": [
+          "64bits", 
+          "channel-stable", 
+          "host-os-linux-64", 
+          "resenet", 
+          "resnet18", 
+          "target-os-linux-64", 
+          "v20180404", 
+          "vint8", 
+          "vtamodel", 
+          "weights"
+        ], 
+        "customize": {
+          "file_model": "quantize_graph.json", 
+          "used_package_uid": "345c4a4420d02c60", 
+          "used_package_uoa": "vtamodel-resnet18-int8", 
+          "file_weights": "quantize_model.pkl", 
+          "package_extra_name": " (resnet 18, int8, 20180404)", 
+          "file_vta_bit": "vta.bit", 
+          "skip_path": "yes", 
+          "version": "20180404", 
+          "check_that_exists": "yes", 
+          "full_path": "/home/fursin/CK/local/env/a7740840dea199d8/quantize_params.pkl", 
+          "extra_dir": "", 
+          "version_split": [
+            20180404
+          ], 
+          "install_env": {
+            "PACKAGE_NAME1": "vtamodel-resnet18-int8.tar", 
+            "VTA_MODEL_BIT": "vta.bit", 
+            "CK_HOST_OS_ID": "linux", 
+            "PACKAGE_NAME": "vtamodel-resnet18-int8.tar.bz2", 
+            "CK_TARGET_CPU_BITS": "64", 
+            "PACKAGE_UNBZIP": "YES", 
+            "VTA_MODEL": "quantize_graph.json", 
+            "VTA_MODEL_LABELS": "synset.txt", 
+            "CK_TARGET_OS_ID": "linux", 
+            "VTA_MODEL_WEIGHTS": "quantize_params.pkl", 
+            "PACKAGE_WGET": "YES", 
+            "PACKAGE_UNTAR": "YES", 
+            "PACKAGE_URL": "http://cKnowledge.org/ai/data", 
+            "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+            "PACKAGE_VERSION": "20180404"
+          }, 
+          "file_labels": "synset.txt", 
+          "ck_version": 10, 
+          "env_prefix": "CK_ENV_MODEL_VTA", 
+          "no_os_in_suggested_path": "yes"
+        }, 
+        "setup": {
+          "version_split": [
+            20180404
+          ], 
+          "target_os_bits": "64", 
+          "version": "20180404", 
+          "host_os_uoa": "4258b5fe54828a50", 
+          "target_os_uoa": "4258b5fe54828a50"
+        }, 
+        "env_script": "env.sh", 
+        "package_uoa": "345c4a4420d02c60", 
+        "soft_uoa": "5cd477e80e72a9dc", 
+        "env": {
+          "CK_ENV_MODEL_VTA_MODEL_LABELS_FULL": "/home/fursin/CK/local/env/a7740840dea199d8/synset.txt", 
+          "CK_ENV_MODEL_VTA_MODEL": "quantize_graph.json", 
+          "CK_ENV_MODEL_VTA_MODEL_BIT_FULL": "/home/fursin/CK/local/env/a7740840dea199d8/vta.bit", 
+          "CK_ENV_MODEL_VTA_MODEL_WEIGHTS_FULL": "/home/fursin/CK/local/env/a7740840dea199d8/quantize_params.pkl", 
+          "CK_ENV_MODEL_VTA_MODEL_WEIGHTS": "quantize_params.pkl", 
+          "CK_ENV_MODEL_VTA_MODEL_BIT": "vta.bit", 
+          "CK_ENV_MODEL_VTA_MODEL_FULL": "/home/fursin/CK/local/env/a7740840dea199d8/quantize_graph.json", 
+          "CK_ENV_MODEL_VTA": "/home/fursin/CK/local/env/a7740840dea199d8", 
+          "CK_ENV_MODEL_VTA_MODEL_LABELS": "synset.txt"
+        }, 
+        "soft_alias": "model.vta"
+      }, 
+      "choices": [
+        "a7740840dea199d8"
+      ], 
+      "local": "yes", 
+      "force_target_as_host": "yes"
+    }, 
+    "lib-tvm": {
+      "sort": 20, 
+      "for_run_time": "yes", 
+      "bat": ". /home/fursin/CK/local/env/d04b73b535e0e667/env.sh\n", 
+      "cus": {
+        "git_src_dir": "src", 
+        "use_git_revision": "yes", 
+        "used_package_uid": "fdda38b07c848ec8", 
+        "used_package_uoa": "lib-tvm-master-cpu", 
+        "install_env": {
+          "USE_RPC": 1, 
+          "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+          "PACKAGE_SUB_DIR": "src", 
+          "BUILD_RPC_RUNTIME": "OFF", 
+          "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+          "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+          "CK_TARGET_CPU_BITS": "64", 
+          "PACKAGE_GIT": "YES", 
+          "USE_OPENCL": 0, 
+          "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+          "CK_HOST_OS_ID": "linux", 
+          "PACKAGE_VERSION": "master", 
+          "PYTHON_EXE": "python", 
+          "CK_TARGET_OS_ID": "linux", 
+          "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+          "PACKAGE_PATCH": "NO", 
+          "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+          "PACKAGE_COPY": "NO", 
+          "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
+          "PACKAGE_CONFIGURE_FLAGS": "", 
+          "PACKAGE_BUILD_TYPE": "make", 
+          "PACKAGE_GIT_CHECKOUT": "e4c2af9abdcb3c7aabafba8084414d7739c17c4c", 
+          "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
+          "PACKAGE_GIT_CLONE_FLAGS": "--recursive"
+        }, 
+        "soft_file": {
+          "win": "libtvm.dll", 
+          "linux": "libtvm.so"
+        }, 
+        "extra_dir": "", 
+        "skip_path": "yes", 
+        "version": "master-e4c2af9", 
+        "env_prefix": "CK_ENV_LIB_TVM", 
+        "git_info": {
+          "revision": "e4c2af9", 
+          "iso_datetime_cut": "20180220", 
+          "iso_datetime_cut_revision": "20180220-e4c2af9", 
+          "iso_datetime": "2018-02-20T16:56:59", 
+          "datetime": "Tue Feb 20 16:56:59 2018 -0800"
+        }, 
+        "version_split": [
+          0, 
+          0
+        ], 
+        "limit_recursion_dir_search": {
+          "win": 5, 
+          "linux": 5
+        }, 
+        "check_that_exists": "yes", 
+        "no_ver_in_suggested_path": "yes", 
+        "ck_version": 10, 
+        "full_path": "/home/fursin/CK/local/env/d04b73b535e0e667/src/lib/libtvm.so", 
+        "path_lib": "/home/fursin/CK/local/env/d04b73b535e0e667/src/lib"
+      }, 
+      "name": "TVM library", 
+      "tags": "lib,tvm", 
+      "num_entries": 1, 
+      "choices": [
+        "d04b73b535e0e667"
+      ], 
+      "uoa": "d04b73b535e0e667", 
+      "dict": {
+        "data_name": "TVM library", 
+        "deps": {
+          "python": {
+            "detected_ver": "2.7.12", 
+            "sort": 5, 
+            "bat": ". /home/fursin/CK/local/env/7e0e1bdbda34e9d9/env.sh\n", 
+            "ver": "2.7.12", 
+            "name": "Python", 
+            "tags": "compiler,python", 
+            "build_dir_name": "python", 
+            "uoa": "7e0e1bdbda34e9d9", 
+            "choices": [
+              "7e0e1bdbda34e9d9"
+            ], 
+            "num_entries": 1, 
+            "dict": {
+              "env_script": "env.sh", 
+              "deps": {}, 
+              "tags": [
+                "64bits", 
+                "compiler", 
+                "host-os-linux-64", 
+                "lang-python", 
+                "python", 
+                "target-os-linux-64", 
+                "v2", 
+                "v2.7", 
+                "v2.7.12"
+              ], 
+              "customize": {
+                "soft_version_cmd": {
+                  "win": "--version > $#filename#$ 2>&1", 
+                  "linux": "--version > $#filename#$ 2>&1"
+                }, 
+                "only_for_host_os_tags": [
+                  "windows", 
+                  "linux"
+                ], 
+                "build_dir_name": "python", 
+                "env_prefix": "CK_ENV_COMPILER_PYTHON", 
+                "skip_path": "yes", 
+                "only_for_target_os_tags": [
+                  "windows", 
+                  "android", 
+                  "linux"
+                ], 
+                "languages": [
+                  "PYTHON"
+                ], 
+                "soft_file": {
+                  "win": "python*.exe", 
+                  "linux": "python*"
+                }, 
+                "version": "2.7.12", 
+                "soft_file_from_host_os": "yes", 
+                "add_only_with_version": "yes", 
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "limit_recursion_dir_search": {
+                  "win": 4, 
+                  "linux": 3
+                }, 
+                "check_that_exists": "yes", 
+                "ck_version": 10, 
+                "full_path": "/usr/bin/python2"
+              }, 
+              "setup": {
+                "version_split": [
+                  2, 
+                  7, 
+                  12
+                ], 
+                "target_os_bits": "64", 
+                "version": "2.7.12", 
+                "host_os_uoa": "4258b5fe54828a50", 
+                "target_os_uoa": "4258b5fe54828a50"
+              }, 
+              "data_name": "python", 
+              "soft_uoa": "45d68512df22fde7", 
+              "env": {
+                "CK_PYTHON_IPYTHON_BIN_FULL": "/usr/local/bin/ipython2", 
+                "CK_ENV_COMPILER_PYTHON": "/usr", 
+                "CK_PYTHON_VER2": "YES", 
+                "CK_ENV_COMPILER_PYTHON_BIN": "/usr/bin", 
+                "CK_PYTHON_PIP_BIN_FULL": "/usr/local/bin/pip2", 
+                "CK_PYTHON_IPYTHON_BIN": "ipython2", 
+                "CK_PY_RT": "python", 
+                "CK_PY_OBJ_EXT": ".pyc", 
+                "CK_ENV_COMPILER_PYTHON_FILE": "/usr/bin/python2", 
+                "CK_PYTHON_BIN": "python2", 
+                "CK_PYC": "python", 
+                "CK_PYTHON_PIP_BIN": "pip2"
+              }, 
+              "soft_alias": "compiler.python"
+            }, 
+            "local": "yes"
+          }, 
+          "host-compiler": {
+            "enable_if_env": {
+              "BUILD_RPC_RUNTIME": "ON"
+            }, 
+            "sort": 15, 
+            "skipped": "yes", 
+            "name": "Compiler", 
+            "tags": "compiler, lang-c", 
+            "local": "yes"
+          }, 
+          "compiler": {
+            "detected_ver": "5.0.0-3~16.04.1", 
+            "disable_if_env": {
+              "BUILD_RPC_RUNTIME": "ON"
+            }, 
+            "bat": ". /home/fursin/CK/local/env/0c39fb6f56334db8/env.sh\n", 
+            "ver": "5.0.0-3~16.04.1", 
+            "name": "LLVM compiler", 
+            "tags": "compiler, lang-c, llvm", 
+            "build_dir_name": "llvm", 
+            "enabled": "yes", 
+            "uoa": "0c39fb6f56334db8", 
+            "choices": [
+              "0c39fb6f56334db8"
+            ], 
+            "sort": 10, 
+            "num_entries": 1, 
+            "dict": {
+              "env_script": "env.sh", 
+              "deps": {
+                "ndk-gcc": {
+                  "local": "yes", 
+                  "name": "Android NDK GCC", 
+                  "only_for_target_os_tags": [
+                    "android"
+                  ], 
+                  "tags": "compiler,gcc,ndk"
+                }, 
+                "mvsc": {
+                  "local": "yes", 
+                  "name": "microsoft C compiler", 
+                  "only_for_target_os_tags": [
+                    "windows"
+                  ], 
+                  "tags": "microsoft,compiler"
+                }
+              }, 
+              "tags": [
+                "64bits", 
+                "compiler", 
+                "host-os-linux-64", 
+                "lang-c", 
+                "lang-cpp", 
+                "llvm", 
+                "target-os-linux-64", 
+                "v5", 
+                "v5.0", 
+                "v5.0.0", 
+                "v5.0.0.0", 
+                "v5.0.0.0.4", 
+                "v5.0.0.0.4.1"
+              ], 
+              "customize": {
+                "tool_postfix": "-5.0", 
+                "can_strip_dynamic_lib": "yes", 
+                "build_dir_name": "llvm", 
+                "skip_path": "yes", 
+                "tool_prefix_configured": "yes", 
+                "tool_prefix": "", 
+                "tool_postfix_configured": "yes", 
+                "env_prefix": "CK_ENV_COMPILER_LLVM", 
+                "soft_version_cmd": {
+                  "win": " --version > $#filename#$ 2>&1", 
+                  "linux": "--version > $#filename#$ 2>&1"
+                }, 
+                "soft_path_example": {
+                  "win": "C:\\Program Files (x86)\\llvm\\bin\\clang.exe", 
+                  "linux": "/usr/bin/clang"
+                }, 
+                "languages": [
+                  "C", 
+                  "CPP"
+                ], 
+                "version": "5.0.0-3~16.04.1", 
+                "soft_file_from_host_os": "yes", 
+                "path_lib": "/usr/lib", 
+                "sort": 50, 
+                "soft_file": {
+                  "win": "clang.exe", 
+                  "linux": "clang"
+                }, 
+                "retarget": "no", 
+                "search_numeric_ext_on_linux": "yes", 
+                "add_to_path": "yes", 
+                "add_only_with_version": "yes", 
+                "version_split": [
+                  5, 
+                  0, 
+                  0, 
+                  0, 
+                  4, 
+                  1
+                ], 
+                "limit_recursion_dir_search": {
+                  "win": 4, 
+                  "linux": 3
+                }, 
+                "check_that_exists": "yes", 
+                "ck_version": 10, 
+                "path_include": "/usr/include", 
+                "only_for_target_os_tags": [
+                  "windows", 
+                  "linux"
+                ], 
+                "full_path": "/usr/bin/clang-5.0"
+              }, 
+              "setup": {
+                "version_split": [
+                  5, 
+                  0, 
+                  0, 
+                  0, 
+                  4, 
+                  1
+                ], 
+                "target_os_bits": "64", 
+                "version": "5.0.0-3~16.04.1", 
+                "host_os_uoa": "4258b5fe54828a50", 
+                "target_os_uoa": "4258b5fe54828a50"
+              }, 
+              "data_name": "LLVM compiler", 
+              "soft_uoa": "1c2eb494b8ae3bc4", 
+              "env": {
+                "CK_FLAGS_DYNAMIC_BIN": " ", 
+                "CK_COMPILER_FLAGS_OBLIGATORY": "", 
+                "CK_AR": "llvm-ar", 
+                "CK_COMPILER_POSTFIX": "-5.0", 
+                "CK_PROFILER": "gprof", 
+                "CK_COMPILER_TOOLCHAIN_NAME": "clang", 
+                "CK_LIB_EXT": ".a", 
+                "CK_LLVM_CONFIG": "llvm-config-5.0", 
+                "CK_OPT_SIZE": "-Os", 
+                "CK_OPT_SPEED": "-O3", 
+                "CK_COMPILER_FLAG_PTHREAD_LIB": "-lpthread", 
+                "CK_CC": "clang-5.0", 
+                "CK_RANLIB": "llvm-ranlib", 
+                "CK_COMPILER_FLAG_GPROF": "-pg", 
+                "CK_LB_OUTPUT": "", 
+                "CK_COMPILER_ENABLE_EXCEPTIONS": "-fcxx-exceptions", 
+                "CK_ENV_COMPILER_LLVM": "/usr", 
+                "CK_FLAG_PREFIX_VAR": "-D", 
+                "CK_COMPILER_FLAG_STD90": "-std=c90", 
+                "CK_EXTRA_LIB_M": "-lm", 
+                "CK_COMPILER_FLAG_STD99": "-std=c99", 
+                "CK_FLAG_PREFIX_LIB_DIR": "-L", 
+                "CK_FLAGS_CREATE_OBJ": "-c", 
+                "CK_LINKER_FLAG_OPENMP": "-fopenmp", 
+                "CK_ENV_COMPILER_LLVM_BIN": "/usr/bin", 
+                "CK_OPT_UNWIND": " ", 
+                "CK_OBJ_EXT": ".o", 
+                "CK_FLAGS_OUTPUT": "-o ", 
+                "CK_LB": "llvm-ar rcs", 
+                "CK_MAKE": "make", 
+                "CK_COMPILER_FLAG_CPP11": "-std=c++11", 
+                "CK_COMPILER_FLAG_OPENMP": "-fopenmp", 
+                "CK_PLUGIN_FLAG": "-fplugin=", 
+                "CK_OPT_SPEED_SAFE": "-O2", 
+                "CK_DLL_EXT": ".so", 
+                "CK_CXX": "clang++-5.0", 
+                "CK_ASM_EXT": ".s", 
+                "CK_FLAG_PREFIX_INCLUDE": "-I", 
+                "CK_LD_FLAGS_EXTRA": "", 
+                "CK_OBJDUMP": "llvm-objdump -d", 
+                "CK_EXE_EXT": ".out", 
+                "CK_FLAGS_DLL_EXTRA": "", 
+                "CK_FLAGS_DLL": "-shared -fPIC", 
+                "CK_FLAGS_STATIC_BIN": "-static -fPIC", 
+                "CK_FLAGS_STATIC_LIB": "-fPIC", 
+                "CK_EXTRA_LIB_DL": "-ldl", 
+                "CK_GPROF_OUT_FILE": "gmon.out", 
+                "CK_COMPILER_FLAG_CPP0X": "-std=c++0x", 
+                "CK_COMPILER_FLAG_PLUGIN": "-fplugin=", 
+                "CK_FLAGS_CREATE_ASM": "-S", 
+                "CK_COMPILER_PREFIX": ""
+              }, 
+              "soft_alias": "compiler.llvm"
+            }, 
+            "local": "yes"
+          }
+        }, 
+        "tags": [
+          "64bits", 
+          "compiled-by-llvm", 
+          "compiled-by-llvm-5.0.0-3~16.04.1", 
+          "compiled-by-unknown_host-compiler", 
+          "host-os-linux-64", 
+          "lib", 
+          "target-os-linux-64", 
+          "tvm", 
+          "v0", 
+          "v0.0", 
+          "vcpu", 
+          "vmaster", 
+          "vsources"
+        ], 
+        "customize": {
+          "git_src_dir": "src", 
+          "use_git_revision": "yes", 
+          "used_package_uid": "fdda38b07c848ec8", 
+          "used_package_uoa": "lib-tvm-master-cpu", 
+          "install_env": {
+            "USE_RPC": 1, 
+            "PACKAGE_SKIP_CLEAN_INSTALL": "NO", 
+            "PACKAGE_SUB_DIR": "src", 
+            "BUILD_RPC_RUNTIME": "OFF", 
+            "PACKAGE_SKIP_LINUX_MAKE": "YES", 
+            "PACKAGE_SKIP_CLEAN_OBJ": "NO", 
+            "CK_TARGET_CPU_BITS": "64", 
+            "PACKAGE_GIT": "YES", 
+            "USE_OPENCL": 0, 
+            "CK_HOST_CPU_NUMBER_OF_PROCESSORS": "20", 
+            "CK_HOST_OS_ID": "linux", 
+            "PACKAGE_VERSION": "master", 
+            "PYTHON_EXE": "python", 
+            "CK_TARGET_OS_ID": "linux", 
+            "PACKAGE_SKIP_BUILD_ERROR": "NO", 
+            "PACKAGE_PATCH": "NO", 
+            "PACKAGE_CONFIGURE_FLAGS_LINUX": "", 
+            "PACKAGE_COPY": "NO", 
+            "PACKAGE_URL": "https://github.com/dmlc/tvm.git", 
+            "PACKAGE_CONFIGURE_FLAGS": "", 
+            "PACKAGE_BUILD_TYPE": "make", 
+            "PACKAGE_GIT_CHECKOUT": "e4c2af9abdcb3c7aabafba8084414d7739c17c4c", 
+            "PACKAGE_SKIP_CLEAN_SRC_DIR": "NO", 
+            "PACKAGE_GIT_CLONE_FLAGS": "--recursive"
+          }, 
+          "soft_file": {
+            "win": "libtvm.dll", 
+            "linux": "libtvm.so"
+          }, 
+          "extra_dir": "", 
+          "skip_path": "yes", 
+          "version": "master-e4c2af9", 
+          "env_prefix": "CK_ENV_LIB_TVM", 
+          "git_info": {
+            "revision": "e4c2af9", 
+            "iso_datetime_cut": "20180220", 
+            "iso_datetime_cut_revision": "20180220-e4c2af9", 
+            "iso_datetime": "2018-02-20T16:56:59", 
+            "datetime": "Tue Feb 20 16:56:59 2018 -0800"
+          }, 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "limit_recursion_dir_search": {
+            "win": 5, 
+            "linux": 5
+          }, 
+          "check_that_exists": "yes", 
+          "no_ver_in_suggested_path": "yes", 
+          "ck_version": 10, 
+          "full_path": "/home/fursin/CK/local/env/d04b73b535e0e667/src/lib/libtvm.so", 
+          "path_lib": "/home/fursin/CK/local/env/d04b73b535e0e667/src/lib"
+        }, 
+        "setup": {
+          "deps_compiler": "0c39fb6f56334db8", 
+          "version": "master", 
+          "deps_python": "7e0e1bdbda34e9d9", 
+          "version_split": [
+            0, 
+            0
+          ], 
+          "target_os_bits": "64", 
+          "host_os_uoa": "4258b5fe54828a50", 
+          "target_os_uoa": "4258b5fe54828a50"
+        }, 
+        "env_script": "env.sh", 
+        "package_uoa": "fdda38b07c848ec8", 
+        "soft_uoa": "158cbb3a6143dfa6", 
+        "env": {
+          "CK_ENV_LIB_TVM_PYTHON_TOPI_LIB": "/home/fursin/CK/local/env/d04b73b535e0e667/src/topi/python", 
+          "CK_ENV_LIB_TVM_PYTHON_LIB": "/home/fursin/CK/local/env/d04b73b535e0e667/src/python", 
+          "CK_ENV_LIB_TVM_LIB": "/home/fursin/CK/local/env/d04b73b535e0e667/src/lib", 
+          "CK_ENV_LIB_TVM": "/home/fursin/CK/local/env/d04b73b535e0e667/src"
+        }, 
+        "soft_alias": "lib.tvm"
+      }, 
+      "ver": "master-e4c2af9", 
+      "package_uoa": "fdda38b07c848ec8", 
+      "local": "yes"
+    }
+  }, 
+  "no_compiler_description": "yes", 
+  "choices_desc": {
+    "##dataset_file": {
+      "has_choice": "yes", 
+      "sort": 1100, 
+      "tags": [
+        "setup"
+      ], 
+      "type": "text", 
+      "choices": [
+        "cat.jpg"
+      ]
+    }
+  }, 
+  "speed": "no"
+}
